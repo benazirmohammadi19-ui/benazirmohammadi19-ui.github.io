@@ -8,14 +8,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg: #0B0F14;
-    --surface: #131922;
-    --surface-2: #1A2230;
-    --text: #E8ECEF;
-    --muted: #8B96A5;
-    --accent: #3ED8C3;
-    --accent-dim: rgba(62,216,195,0.12);
-    --warm: #FFB86B;
+    --bg: #0B0B0F;
+    --surface: #16161D;
+    --surface-2: #1E1E28;
+    --text: #F2F0F5;
+    --muted: #9A96A8;
+    --accent: #F0A8E8;
+    --accent-2: #B084F0;
+    --accent-dim: rgba(240,168,232,0.12);
+    --warm: #B084F0;
     --line: rgba(255,255,255,0.08);
   }
   *{ margin:0; padding:0; box-sizing:border-box; }
@@ -27,7 +28,7 @@
     line-height: 1.6;
     overflow-x: hidden;
   }
-  ::selection{ background: var(--accent); color: #0B0F14; }
+  ::selection{ background: var(--accent); color: #0B0B0F; }
   a{ color: inherit; text-decoration: none; }
   .wrap{ max-width: 960px; margin: 0 auto; padding: 0 28px; }
 
@@ -71,7 +72,7 @@
     font-family:'JetBrains Mono', monospace;
     font-size: 13px; color: var(--accent);
     background: var(--accent-dim);
-    border: 1px solid rgba(62,216,195,0.3);
+    border: 1px solid rgba(240,168,232,0.3);
     padding: 8px 16px; border-radius: 100px;
     margin-bottom: 32px;
   }
@@ -91,15 +92,18 @@
   h1.name{
     font-family:'Fraunces', serif;
     font-weight: 500;
-    font-size: clamp(42px, 7vw, 76px);
-    line-height: 1.05;
+    font-size: clamp(48px, 9vw, 92px);
+    line-height: 1.02;
     letter-spacing: -0.01em;
-    margin-bottom: 18px;
+    margin-bottom: 24px;
   }
   h1.name em{
-    font-style: italic;
-    font-weight: 300;
-    color: var(--accent);
+    font-style: normal;
+    font-weight: 600;
+    background: linear-gradient(100deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
   .role{
     font-family:'JetBrains Mono', monospace;
@@ -127,10 +131,10 @@
   }
   .btn-primary{
     background: var(--accent);
-    color: #0B0F14;
+    color: #0B0B0F;
     font-weight: 600;
   }
-  .btn-primary:hover{ background: #58e6d3; transform: translateY(-2px); }
+  .btn-primary:hover{ background: #f5c0ef; transform: translateY(-2px); }
   .btn-ghost{
     border-color: var(--line);
     color: var(--text);
@@ -160,7 +164,7 @@
     padding: 28px;
     transition: border-color .2s ease, transform .2s ease;
   }
-  .card:hover{ border-color: rgba(62,216,195,0.4); transform: translateY(-4px); }
+  .card:hover{ border-color: rgba(240,168,232,0.4); transform: translateY(-4px); }
   .card-tag{
     font-family:'JetBrains Mono', monospace;
     font-size: 12px; color: var(--warm);
@@ -258,19 +262,18 @@
       <span id="typed-line"></span><span class="typed-cursor"></span>
     </div>
 
-    <h1 class="name">Hi, I'm <em>Benazir</em><br>Mohammadi.</h1>
-    <div class="role">Computer Science Student <span class="accent">·</span> Python &amp; C Developer</div>
+    <h1 class="name">I'm <em>Benazir<br>Mohammadi</em><br>a Computer Science Student.</h1>
 
     <p class="bio">
-      I'm a Computer Science student based in Chittagong, Bangladesh, with a strong interest in
-      software development and problem solving. I'm currently building practical projects while
+      I'm based in Chittagong, Bangladesh, with a strong interest in
+      software development and problem solving. Currently building practical projects while
       learning Python and C, with the goal of becoming a software engineer who contributes to
       work that actually makes a difference.
     </p>
 
     <div class="cta-row">
-      <a href="#work" class="btn btn-primary">View my work →</a>
-      <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      <a href="#work" class="btn btn-primary">View My Work →</a>
+      <a href="#contact" class="btn btn-ghost">Let's Talk</a>
     </div>
   </div>
 </header>
